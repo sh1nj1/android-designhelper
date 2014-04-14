@@ -89,7 +89,6 @@ public class DesignScreenActivity extends Activity implements View.OnTouchListen
         });
 
         mContentView.setOnTouchListener(this);
-        mContentView.setImageResource(R.drawable.login_or_signup_main);
 
         mSeekBar.setOnSeekBarChangeListener(this);
         mSeekBar.setProgress((int) mContentView.getAlpha() * 100);
