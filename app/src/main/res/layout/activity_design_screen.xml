@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sh1nj1.android.designhelper.DesignScreenActivity">
+
+    <com.sh1nj1.android.designhelper.FitWidthImageView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:keepScreenOn="true"
+        android:alpha="0.5"
+        android:gravity="center"
+        android:scaleType="center" />
+
+    <LinearLayout
+        android:id="@+id/topControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+
+        <TextView
+            android:id="@+id/text"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="toggleVisible"
+            android:text="Ti"
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_marginTop="6dp"
+            android:alpha="0.5"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/menu"
+            android:alpha="0.5"
+            android:entries="@array/menus"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:onClick="reset"
+            android:text="0"
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="previous"
+            android:text="&lt;&lt;"
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="next"
+            android:text="&gt;&gt;"
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="left"
+            android:text="&lt;"
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="up"
+            android:text="^"
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="down"
+            android:text="."
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="right"
+            android:text="&gt;"
+            android:alpha="0.5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- this will be on the top of this container -->
+    <TextView android:id="@+id/pointer1"
+        style="@style/Pointer"/>
+
+    <TextView android:id="@+id/pointer2"
+        style="@style/Pointer" />
+</FrameLayout>
